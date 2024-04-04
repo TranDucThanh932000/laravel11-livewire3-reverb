@@ -5,13 +5,13 @@ namespace App\Livewire;
 use App\Jobs\UserCreate;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
+// use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
 class UserList extends Component
 {
-    use LivewireAlert;
+    // use LivewireAlert;
 
     public $users;
 
