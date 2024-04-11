@@ -15,5 +15,8 @@ export default {
     },
 
     // Add daisyUI
-    plugins: [require("daisyui")]
+    plugins: [require("daisyui")],
+
+    //dark mode
+    darkMode: 'class', 
 }

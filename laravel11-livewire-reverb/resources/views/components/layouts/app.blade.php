@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ isset($title) ? $title.' - '.config('app.name') : config('app.name') }}</title>
+    <title>{{ isset($title) ? $title : config('app.name') }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -48,14 +48,17 @@
 
                 <x-mary-menu-item title="Dashboard" icon="o-sparkles" link="/" />
                 <x-mary-menu-sub title="User" icon="o-cog-6-tooth">
-                    <x-mary-menu-item title="List" icon="o-user" link="/user" />
-                    <x-mary-menu-item title="Archives" icon="o-archive-box" link="####" />
+                    <x-mary-menu-item title="List" icon="o-user" link="/users" />
+                    <x-mary-menu-item title="Communication" icon="c-chat-bubble-bottom-center-text" link="/communication" />
                 </x-mary-menu-sub>
             </x-mary-menu>
         </x-slot:sidebar>
 
         {{-- The `$slot` goes here --}}
         <x-slot:content>
+            <div style="display: flex;justify-content: end;">
+                <x-mary-theme-toggle class="btn btn-circle btn-ghost" />
+            </div>
             {{ $slot }}
         </x-slot:content>
     </x-mary-main>
