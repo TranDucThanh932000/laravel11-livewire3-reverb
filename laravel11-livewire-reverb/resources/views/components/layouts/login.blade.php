@@ -13,6 +13,9 @@
     <x-mary-main full-width>
         {{-- The `$slot` goes here --}}
         <x-slot:content>
+            <div style="display: flex;justify-content: end;">
+                <x-mary-theme-toggle class="btn btn-circle btn-ghost" />
+            </div>
             {{ $slot }}
         </x-slot:content>
     </x-mary-main>
