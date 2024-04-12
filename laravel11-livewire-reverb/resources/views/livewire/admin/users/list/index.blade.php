@@ -13,7 +13,7 @@ new class extends Component {
 
     public bool $drawer = false;
 
-    public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
+    public array $sortBy = ['column' => 'id', 'direction' => 'asc'];
 
     public int $userId = 0;
 
@@ -42,12 +42,6 @@ new class extends Component {
         ];
     }
 
-    /**
-     * For demo purpose, this is a static collection.
-     *
-     * On real projects you do it with Eloquent collections.
-     * Please, refer to maryUI docs to see the eloquent examples.
-     */
     public function users(): Collection
     {
         return User::all()

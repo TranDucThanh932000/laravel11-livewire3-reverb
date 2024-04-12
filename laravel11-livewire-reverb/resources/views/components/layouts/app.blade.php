@@ -37,19 +37,19 @@
                 @if($user = auth()->user())
                     <x-mary-menu-separator />
 
-                    <x-mary-list-item :item="$user" value="name" sub-value="email" no-separator no-hover class="-mx-mary-2 !-my-2 rounded">
+                    <x-mary-list-item :item="$user" value="name" sub-value="username" no-separator no-hover class="-mx-mary-2 !-my-2 rounded">
                         <x-slot:actions>
-                            <x-mary-button icon="o-power" class="btn-circle btn-ghost btn-xs" tooltip-left="logoff" no-wire-navigate link="/logout" />
+                            <x-mary-button icon="o-power" class="btn-circle btn-ghost btn-xs" tooltip-left="Logout" no-wire-navigate link="/admin/logout" />
                         </x-slot:actions>
                     </x-mary-list-item>
 
                     <x-mary-menu-separator />
                 @endif
 
-                <x-mary-menu-item title="Dashboard" icon="o-sparkles" link="/" />
+                <x-mary-menu-item title="Dashboard" icon="o-sparkles" link="/admin/dashboard" />
                 <x-mary-menu-sub title="User" icon="o-cog-6-tooth">
-                    <x-mary-menu-item title="List" icon="o-user" link="/users" />
-                    <x-mary-menu-item title="Communication" icon="c-chat-bubble-bottom-center-text" link="/communication" />
+                    <x-mary-menu-item title="List" icon="o-user" link="/admin/users/list" />
+                    <x-mary-menu-item title="Communication" icon="c-chat-bubble-bottom-center-text" link="/admin/users/communication" />
                 </x-mary-menu-sub>
             </x-mary-menu>
         </x-slot:sidebar>

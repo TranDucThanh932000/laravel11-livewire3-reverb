@@ -22,4 +22,12 @@ class UserService
     {
         return $this->user->authentication($username, $password);
     }
+
+    public function logout() : void
+    {
+        $user = auth()->user();
+        if ($user) {
+            auth()->logout();
+        }
+    }
 }

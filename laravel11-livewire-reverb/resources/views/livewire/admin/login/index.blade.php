@@ -24,7 +24,7 @@ $save = function (UserService $userService) {
         return $this->error('Username or password is not correct', timeout: 2000);
     }
     $this->success('Logged in successfully');
-    return $this->redirect('/users');
+    return $this->redirect('/admin/users/list');
 }
 
 ?>
